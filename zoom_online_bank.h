@@ -1,5 +1,7 @@
 //
-// Created by TunMyatKg on 3/12/2023.
+// 8th Assignment(to code Log In fun)
+// modified compare_two_charArray Fun (update in 8th Assignment)
+// 9th Assignment( to add $ in front of amount & to add exact date time in the transition record)
 //
 
 #ifndef ASSIGNMENTPROJ_ZOOM_ONLINE_BANK_H
@@ -663,24 +665,18 @@ void nrc_validation(char nrc_toCheck[50]){
     }
 }
 
-void compare_two_charArray(char first[50] , char second[50]){
+void compare_two_charArray(char first[50] , char second[50]){ //* modified
 
-    int first_counter =  charCounting(first);
-    int second_counter = charCounting(second);
-    int same_counter = 0;
-
-    if( first_counter == second_counter) {
-        for (register int i = 0; i < first_counter; i++) {
+        for (register int i=0; i<50; i++){
             if(first[i] != second[i]){
-                break;
-            }
-            same_counter++;
-        }
+                two_charArray=-1;
+                    break;
 
-        if( first_counter == same_counter){
-            two_charArray = 1;
+            }   else if(first[i]=='\0'){
+                    two_charArray=1;
+                        break;
+                    }
         }
-    }
 }
 
 void myStrongPassword(char pass[50]){
